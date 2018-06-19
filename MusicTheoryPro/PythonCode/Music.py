@@ -1,11 +1,14 @@
 """Code for creating all the MusicElements in form of Html tags"""
+
 notes=["A ","A#","B ","C ","C#","D ","D#","E ","F ","F#","G ","G#"]
 notesnormal=["A ","  ","B ","C ","  ","D ","  ","E ","F ","  ","G ","  "]
+strings={7:"E ",2:"B ",10:"G ",5:"D ",0:"A ",7:"E "}                #according to index of list notes
+
 print("Select any option:")
 print("1 for CHORDS" )
 print("2 for SCALES" )
 print("3 for FRETBOARD" )
-print("4 for normal FRETBOARD")
+print("4 for NORMAL FRETBOARD")
 choice=input("Enter your choice: ")
 if (choice==1):
     majformula=[4,3]
@@ -98,7 +101,6 @@ elif(choice==2):
     ofile.write("</tr>\n")
     ofile.close()
 elif(choice==3):
-    strings={7:"E ",2:"B ",10:"G ",5:"D ",0:"A ",7:"E "}                #according to index of list notes
     ofile=open("Fretboard.txt",'w')
     ofile.write("FRETBOARD\n")
     for note in [7,2,10,5,0,7]:
@@ -115,9 +117,8 @@ elif(choice==3):
     ofile.write("</tr>\n")
     ofile.close()
 elif(choice==4):
-    strings={7:"E ",2:"B ",10:"G ",5:"D ",0:"A ",7:"E "}                #according to index of list notes
-    ofile=open("Fretboard.txt",'w')
-    ofile.write("FRETBOARD\n")
+    ofile=open("FretboardNormal.txt",'w')
+    ofile.write("FRETBOARDNORMAL\n")
     for note in [7,2,10,5,0,7]:
                 ofile.write("</tr>\n")
                 ofile.write("<tr>\n")
