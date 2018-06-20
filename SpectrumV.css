@@ -1,0 +1,28 @@
+h1{
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;
+}
+td{
+  height: 300px;
+  width: 150px;
+  border: white,20px;
+}
+table{
+  margin: auto;
+
+}
+#one{
+  background-color: #B24C63;
+}
+#two{
+  background-color: #5438DC;
+}
+#three{
+  background-color: #357DED
+}
+#four{
+  background-color: #56EEF4;
+}
+#five{
+  background-color: #32E875;
+}
