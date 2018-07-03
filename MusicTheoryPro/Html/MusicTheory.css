@@ -10,5 +10,7 @@ h1{
   text-align: center;
 }
 td{
-  background-color: blue;
+  font-weight: bold;
+  height: 20px;
+  width: 20px;
 }
