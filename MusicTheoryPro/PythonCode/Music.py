@@ -9,6 +9,7 @@ print("1 for CHORDS" )
 print("2 for SCALES" )
 print("3 for FRETBOARD" )
 print("4 for NORMAL FRETBOARD")
+print("5 for empty FRETBOARD")
 choice=input("Enter your choice: ")
 if (choice==1):
     majformula=[4,3]
@@ -127,6 +128,22 @@ elif(choice==4):
                 while i<=22 :
                             i=i+1
                             ofile.write("<td>"+notesnormal[num]+"</td>"+'\n')
+                            num=num+1
+                            if(num>=12):
+                                        num=num-12
+    ofile.write("</tr>\n")
+    ofile.close()
+elif(choice==5):
+    ofile=open("FretboardEmpty.txt",'w')
+    ofile.write("FRETBOARDEmpty\n")
+    for note in [7,2,10,5,0,7]:
+                ofile.write("</tr>\n")
+                ofile.write("<tr>\n")
+                num=note
+                i=0
+                while i<=22 :
+                            i=i+1
+                            ofile.write("<td>"+" "+"</td>"+'\n')
                             num=num+1
                             if(num>=12):
                                         num=num-12
